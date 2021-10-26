@@ -7,19 +7,30 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isAuth = false;
+  lastUpdate =  new Date();
+  // lastUpdate = new Promise(
+  //   (resolve, reject) => {
+  //     const date = new Date();
+  //     setTimeout(
+  //       () => {
+  //         resolve(date);
+  //       }, 2000
+  //     )
+  //   }
+  // );
 
   appareils = [
     {
       name : 'Machine  à laver',
-      status : 'éteint'
+      status : 'allumé'
     },
     {
       name : 'Télévision',
-      status : 'éteint'
+      status : 'allumé'
     },
     {
       name : 'Ordinateur',
-      status : 'allumé'
+      status : 'éteint'
     }
    ] ;
 
