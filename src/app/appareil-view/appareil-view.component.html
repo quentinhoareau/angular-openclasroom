@@ -3,7 +3,7 @@
 
   <p>Mise à jour: {{lastUpdate | date: 'short'  | uppercase }} </p>
   <ul class="list-group">
-    <app-appareil [id]="appareil.id" *ngFor="let appareil of appareils; let i = index" [indexOfAppareil]="i" [appareilName]="appareil.name" [appareilStatus]="appareil.status">
+    <app-appareil [id]="appareil.id" *ngFor="let appareil of appareils" [appareilName]="appareil.name" [appareilStatus]="appareil.status">
      <a detailsLink [routerLink]="[appareil.id]" ><button class="btn btn-primary"> Voir les détails </button></a>
     </app-appareil>
   </ul>
