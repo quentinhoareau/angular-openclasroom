@@ -23,6 +23,7 @@ export class AppareilComponent implements OnInit {
     if(this.appareilStatus === 'allumé'){
       return 'green';
     }
+
     else if(this.appareilStatus === 'éteint') {
       return 'red';
     }
@@ -31,7 +32,7 @@ export class AppareilComponent implements OnInit {
   }
 
   onSwitchOn(){
-    this.appareilService.switchOnOne(this.indexOfAppareil) ;
+    this.appareilService.switchOnOne(this.indexOfAppareil);
   }
 
   onSwitchOff(){
