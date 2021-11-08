@@ -3,7 +3,7 @@
 
   <p>Mise à jour: {{lastUpdate | date: 'short'  | uppercase }} </p>
   <ul class="list-group">
-    <app-appareil *ngFor="let appareil of appareils; let i = index" [indexOfAppareil]="i" [appareilName]="appareil.name" [appareilStatus]="appareil.status"></app-appareil>
+    <app-appareil [idOfAppareil]="appareil.id" *ngFor="let appareil of appareils; let i = index" [indexOfAppareil]="i" [appareilName]="appareil.name" [appareilStatus]="appareil.status"></app-appareil>
 
   </ul>
   <button class="btn btn-success" (click)="onAllumer()">Tout allumer</button>

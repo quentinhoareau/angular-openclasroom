@@ -10,6 +10,7 @@ export class AppareilComponent implements OnInit {
   @Input() appareilName: string;
   @Input() appareilStatus: string;
   @Input() indexOfAppareil: number;
+  @Input() idOfAppareil: number;
   constructor(private appareilService: AppareilService) { }
 
   ngOnInit(): void {
@@ -32,11 +33,11 @@ export class AppareilComponent implements OnInit {
   }
 
   onSwitchOn(){
-    this.appareilService.switchOnOne(this.indexOfAppareil);
+    this.appareilService.switchOnOne(this.idOfAppareil);
   }
 
   onSwitchOff(){
-    this.appareilService.switchOffOne(this.indexOfAppareil) ;
+    this.appareilService.switchOffOne(this.idOfAppareil) ;
   }
 }
 

@@ -39,11 +39,11 @@ export class AppareilService {
     }
   }
 
-  switchOnOne(index: number){
-    this.appareils[index].status= 'allumé';
+  switchOnOne(id: number){
+    this.getAppareilById(id)!.status= 'allumé';
   }
-  switchOffOne(index: number){
-    this.appareils[index].status= 'éteint';
+  switchOffOne(id: number){
+    this.getAppareilById(id)!.status= 'éteint';
   }
 
 
